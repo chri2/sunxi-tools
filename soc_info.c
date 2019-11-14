@@ -236,6 +236,13 @@ soc_info_t soc_info_table[] = {
 		/* Check L.NOP in the OpenRISC reset vector */
 		.needs_smc_workaround_if_zero_word_at_addr = 0x100004,
 	},{
+		.soc_id       = 0x1699, /* Allwinner B288 */
+		.name         = "B288",
+		.scratch_addr = 0x1000,
+		.thunk_addr   = 0xA200, .thunk_size = 0x200,
+		.swap_buffers = a10_a13_a20_sram_swap_buffers,
+		.sid_base     = 0x01C14000,
+	},{
 		.swap_buffers = NULL /* End of the table */
 	}
 };
