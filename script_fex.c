@@ -239,7 +239,7 @@ int script_parse_fex(FILE *in, const char *filename, struct script *script)
 				goto parse_error;
 			};
 
-			while (isalnum(*p) || *p == '_')
+			while (isalnum(*p) || *p == '_' || *p == '-' || *p == '/')
 				p++;
 			mark = p;
 			p = skip_blank(p);
